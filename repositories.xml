@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+
+<repositories version="1.0">
+	<repo priority="50" quality="experimental" status="unofficial">
+		<name>gentoo-build-service</name>
+		<description>Official Gentoo Build Service Overlay</description>
+		<homepage>https://github.com/gentoo-build-service/gentoo-overlay</homepage>
+		<owner>
+			<email>mudler@gentoo.org</email>
+		</owner>
+		<source type="git">https://github.com/gentoo-build-service/gentoo-overlay.git</source>
+	</repo>
+</repositories>
