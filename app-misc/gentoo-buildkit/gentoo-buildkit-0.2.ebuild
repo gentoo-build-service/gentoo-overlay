@@ -11,7 +11,7 @@ SRC_URI="https://github.com/gentoo-build-service/buildkit/archive/v${PV}.tar.gz 
 RESTRICT="mirror"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~arm"
+KEYWORDS="~amd64"
 IUSE=""
 S="${WORKDIR}/buildkit-${PV}"
 DEPEND=""
@@ -22,6 +22,7 @@ RDEPEND="app-misc/pax-utils
 	app-portage/portage-utils
 	app-portage/repoman
 	dev-lang/perl
+	dev-python/shyaml
 	sys-apps/gentoo-functions
 	sys-process/tini"
 
