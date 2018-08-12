@@ -22,7 +22,8 @@ RDEPEND="app-misc/pax-utils
 	app-portage/portage-utils
 	app-portage/repoman
 	dev-lang/perl
-	sys-apps/gentoo-functions"
+	sys-apps/gentoo-functions
+	sys-process/tini"
 
 src_install() {
 	emake DESTDIR="${D}" install
