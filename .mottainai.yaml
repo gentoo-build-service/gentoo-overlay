@@ -1,0 +1,6 @@
+source: "https://github.com/gentoo-build-service/gentoo-overlay"
+directory: "/"
+image: "gentoobuildservice/builder-amd64"
+task: docker_execute
+script:
+   - gentoo-localbuild
