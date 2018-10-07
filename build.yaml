@@ -1,8 +1,6 @@
 build:
   qa_checks: 1
   emerge:
-    remote_overlay:
-           - gentoo-build-service|git|https://github.com/gentoo-build-service/gentoo-overlay
     # Install each package separately
     split_install: 1
     default_args: --accept-properties=-interactive -t --quiet --nospinner --oneshot --complete-graph
