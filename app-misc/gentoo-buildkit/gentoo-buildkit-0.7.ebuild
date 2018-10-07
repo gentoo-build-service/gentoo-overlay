@@ -20,7 +20,6 @@ RDEPEND="app-misc/pax-utils
 	app-portage/layman
 	app-portage/gentoolkit
 	app-portage/portage-utils
-	app-portage/repoman
 	dev-lang/perl
 	dev-python/shyaml
 	sys-apps/gentoo-functions
