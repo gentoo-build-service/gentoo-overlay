@@ -4,9 +4,10 @@ image: "gentoobuildservice/builder-amd64"
 task: docker_execute
 cache_image: "yes"
 script:
-   - ATOMS=$(git diff-tree --name-status -r --no-commit-id remotes/origin/master..HEAD | grep -v "^D" |  sed -r -e 's/^[a-zA-Z0-9]+[[:space:]]*//' -e 's:^([^/]+/[^/]+).*:\1:' | sort -u | grep -E '^(virtual/|[^/]+-)' | xargs echo)
+   - ATOMS=$(git diff-tree --name-status -r --no-commit-id remotes/origin/master..HEAD | grep -v "^D" |  sed -r -e 's/^[a-zA-Z0-9]+[[:space:]]*//' -e 's:^([^/]+/[^/]+).*:\1:' | sort -u | grep -E '^(virtual/|[^/]+-)' |  awk "{print \$1 \"::LocalOverlay\"}" | xargs echo)
    - cp -rf $PWD /usr/local/local_portage
    - export WEBRSYNC=1
+   - export KEEP_GOING=0
    - emaint sync -r gentoo-build-service && emerge -v app-misc/gentoo-buildkit
    - if [ -n "${ATOMS}" ]; then gentoo-builder "${ATOMS}"; else gentoo-localbuild; fi
 
