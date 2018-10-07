@@ -5,6 +5,6 @@ task: docker_execute
 script:
    - ATOMS=$(git diff-tree --name-status -r --no-commit-id remotes/origin/master..HEAD | grep -v "^D" |  sed -r -e 's/^[a-zA-Z0-9]+[[:space:]]*//' -e 's:^([^/]+/[^/]+).*:\1:' | sort -u | grep -E '^(virtual/|[^/]+-)' | xargs echo)
    - cp -rf $PWD /usr/local/local_portage
-   - emerge -v app-misc/gentoo-buildkit
+   - emaint sync -r gentoo-build-service && emerge -v app-misc/gentoo-buildkit
    - if [ -n "${ATOMS}" ]; then gentoo-builder "${ATOMS}"; else gentoo-localbuild; fi
 
