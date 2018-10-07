@@ -8,6 +8,5 @@ script:
    - cp -rf $PWD /usr/local/local_portage
    - export WEBRSYNC=1
    - export KEEP_GOING=0
-   - emaint sync -r gentoo-build-service && emerge -v app-misc/gentoo-buildkit
    - if [ -n "${ATOMS}" ]; then gentoo-builder "${ATOMS}"; else gentoo-localbuild; fi
 
