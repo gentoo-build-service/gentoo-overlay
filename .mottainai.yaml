@@ -3,4 +3,4 @@ directory: "/"
 image: "gentoobuildservice/builder-amd64"
 task: docker_execute
 script:
-   - gentoo-localbuild
+   - LOCAL_OVERLAY=$PWD gentoo-localbuild
