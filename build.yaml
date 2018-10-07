@@ -5,7 +5,7 @@ build:
            - gentoo-build-service|git|https://github.com/gentoo-build-service/gentoo-overlay
     # Install each package separately
     split_install: 1
-    default_args: --accept-properties=-interactive -t --quiet --nospinner --oneshot --complete-graph --buildpkg
+    default_args: --accept-properties=-interactive -t --quiet --nospinner --oneshot --complete-graph
     features: assume-digests binpkg-logs userpriv config-protect-if-modified distlocks ebuild-locks fixlafiles merge-sync parallel-fetch preserve-libs protect-owned sandbox sfperms splitdebug strict
   target:
     - dev-python/shyaml
