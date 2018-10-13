@@ -16,7 +16,6 @@ IUSE=""
 S="${WORKDIR}/buildkit-${PV}"
 DEPEND=""
 RDEPEND="app-misc/pax-utils
-	app-portage/eix
 	app-portage/layman
 	app-portage/gentoolkit
 	app-portage/portage-utils
